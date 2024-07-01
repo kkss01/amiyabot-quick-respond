@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "renderTime": {
+            "title": "渲染时间(毫秒)",
+            "description": "设备性能越差, 首次渲染消耗时间越长 (建议: 500~5000)",
+            "type": "number"
+        },
+        "codeLimit": {
+            "title": "标准缓存上限(MB)",
+            "description": "内容固定的缓存 如: 干员/地图/敌方单位 (设为0关闭自动清理)",
+            "type": "number"
+        },
+        "hashLimit": {
+            "title": "随机缓存上限(MB)",
+            "description": "内容随机的缓存 如: 功能菜单/个人信息 (设为0关闭自动清理)",
+            "type": "number"
+        },
+        "weiboExpire": {
+            "title": "微博缓存有效期(天)",
+            "description": "清除超过指定天数的微博图片缓存 (需要安装官方插件: 微博推送 设为0关闭)",
+            "type": "number"
+        },
+        "clearInterval": {
+            "title": "自动清理间隔(分钟)",
+            "description": "清理超出上限的缓存, 优先清理最久未使用 (LRU). 重载插件后生效",
+            "type": "number"
+        },
+        "showSchedule": {
+            "title": "主动缓存生成",
+            "description": "开启时, 在控制台显示生成进度",
+            "type": "boolean"
+        },
+        "forceRefresh": {
+            "title": "主动生成强制刷新",
+            "description": "关闭时, 跳过已存在的缓存 (不影响查询)",
+            "type": "boolean"
+        },
+        "targetAmount": {
+            "title": "默认生成数量",
+            "description": "达到指定数量时, 在下一个干员停止生成",
+            "type": "number"
+        },
+        "interval": {
+            "title": "主动生成间隔(秒)",
+            "description": "过小会导致卡顿 (建议: 1~5)",
+            "type": "number"
+        },
+        "showDebug": {
+            "title": "输出调试信息",
+            "description": "开启时, 将上一次响应的data输出至缓存目录, 重载生效",
+            "type": "boolean"
+        },
+        "widthLimit": {
+            "title": "限制宽度",
+            "description": "如正常使用, 无需开启",
+            "type": "boolean"
+        }
+    }
+}

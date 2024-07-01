@@ -1,0 +1,13 @@
+{
+    "renderTime": 500,
+    "codeLimit": 512,
+    "hashLimit": 64,
+    "weiboExpire": 7,
+    "clearInterval": 60,
+    "showSchedule": true,
+    "forceRefresh": false,
+    "targetAmount": 16,
+    "interval": 2,
+    "showDebug": false,
+    "widthLimit": false
+}
